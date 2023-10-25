@@ -1,0 +1,2 @@
+22978 train 用于训练150imgs/task模型，有一个train好的权重保存在791（23714）的/root/autodl-tmp/model_epoch_best_ber.pth
+23714 用于train 50 imgs/task 和 5 imgs/task，50 img/task应该权重是没有了，被5 imgs/task覆盖
