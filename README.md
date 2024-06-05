@@ -13,29 +13,55 @@ Dataset
 
 --liver  
 --spleen  
-  --support_**eval**  
+  --support_<strong>eval</strong>  
     --img  
       --3.jpg  
       --3.jpg   
       --3.jpg  
       --3.jpg  
+      ------------  (virtual divider, do not really exist in the folder)
+      --8.jpg
+      ...
     --mask  
       --3.png  
       --3.png  
       --3.png  
       --3.png  
-  --query_**eval**  
+      ------------
+      --8.png
+      ...
+  --query_<strong>eval</strong>  
     --img  
-      --5.jpg  
-      --4.jpg (**notice : slice no.3 is used as the support image in the chunk)  
-      --2.jpg  
       --1.jpg  
+      --2.jpg (<strong>notice</strong> : slice no.3 and no.8 are used as the support image in the chunk)  
+      --4.jpg  
+      --5.jpg  
+      ------------
+      --6.jpg
+      --7.jpg
+      --9.jpg
+      --10.jpg
+      ------------
+      ...
     --mask  
-      --5.png  
-      --4.png (**notice : slice no.3 is used as the support image in the chunk)  
-      --2.png  
       --1.png  
+      --2.png (<strong>notice</strong> : slice no.3 and no.8 are used as the support image in the chunk)  
+      --4.png  
+      --5.png 
+      ------------
+      --6.jpg
+      --7.jpg
+      --9.jpg
+      --10.jpg
+      ------------
+      ...
   --support_train  
+    --(the same as evaluation(eval) data organization)
   --query_train  
+    --(the same as evaluation(eval) data organization)
 --IVC  
-</pre>
+--stomach
+</pre>  
+
+During training and inference, the four support masks (actually the same mask) will be loaded together with the four query images in the same chunk to train the model. 
+
