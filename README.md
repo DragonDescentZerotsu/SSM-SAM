@@ -11,8 +11,8 @@ e.g. ------
 
 Dataset
 
---liver
---spleen
+--liver  
+--spleen  
   --support_**eval**
     --img
       --3.jpg
