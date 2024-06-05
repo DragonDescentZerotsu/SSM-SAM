@@ -8,7 +8,7 @@ If you try to run this project, refer to the file **train_MAML_new_bs4.py**, who
 Chunking CT scans is implemented in a very silly way as I don't want to change the code of previous dataloader. You have to shape your dataset like this (batch-size is 4, number of images in a chunk is 5):  
 
 e.g. ------
-
+<pre>
 Dataset
 
 --liver  
@@ -38,3 +38,4 @@ Dataset
   --support_train  
   --query_train  
 --IVC  
+</pre>
